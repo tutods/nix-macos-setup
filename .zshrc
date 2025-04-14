@@ -21,6 +21,7 @@ zinit light zsh-users/zsh-syntax-highlighting
 zinit light zsh-users/zsh-completions
 zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
+zinit light hlissner/zsh-autopair
 
 # Add in snippets
 zinit snippet OMZP::alias-finder
@@ -34,7 +35,7 @@ autoload -U compinit && compinit
 zinit cdreplay -q
 
 # Keybindings
-bindkey -e
+# bindkey -e
 # Bind up/down arrow keys for history search
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
