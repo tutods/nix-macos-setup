@@ -41,10 +41,7 @@ final_space = true
     type = 'git'
     style = 'plain'
     foreground = 'p:lavender'
-    # template = "{{ .HEAD }} {{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }}{{end}}{{ if gt .Behind 0 }}\uf175{{end}}{{ if gt .Ahead 0 }}\uf176{{end}} "
     template= "<#ffffff>on</> {{ .HEAD }} {{ if .Working.Changed }}{{ .Working.String }} {{ end }}{{ if gt .Behind 0 }}{{end}}{{ if gt .Behind 0 }}\u2193{{end}}{{ if gt .Ahead 0 }}\u2191{{end}} "
-
-    # template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}"
 
     [blocks.segments.properties]
       branch_icon = "\ue725 "
