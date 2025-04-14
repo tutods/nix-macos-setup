@@ -41,7 +41,9 @@ final_space = true
     type = 'git'
     style = 'plain'
     foreground = 'p:lavender'
-    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }}{{end}}{{ if gt .Behind 0 }}\uf062{{end}}{{ if gt .Ahead 0 }}\uf062{{end}} '
+    # template = "{{ .HEAD }} {{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }}{{end}}{{ if gt .Behind 0 }}\uf175{{end}}{{ if gt .Ahead 0 }}\uf176{{end}} "
+    template= "<#ffffff>on</> {{ .HEAD }} {{ if .Working.Changed }}{{ .Working.String }} {{ end }}{{ if gt .Behind 0 }}{{end}}{{ if gt .Behind 0 }}\u2193{{end}}{{ if gt .Ahead 0 }}\u2191{{end}} "
+
     # template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}"
 
     [blocks.segments.properties]
@@ -57,6 +59,22 @@ final_space = true
       rebase_icon = "\ue728 "
       revert_icon = "\uf0e2 "
       tag_icon = "\uf412 "
+
+
+[[blocks]]
+  type = 'prompt'
+  alignment = 'right'
+  overflow = 'hidden'
+
+  [[blocks.segments]]
+    type = 'executiontime'
+    style = 'plain'
+    foreground = 'yellow'
+    background = 'transparent'
+    template = '{{ .FormattedMs }}'
+
+    [blocks.segments.properties]
+      threshold = 5000
 
 [[blocks]]
   type = 'prompt'
