@@ -20,6 +20,7 @@
       # $ nix-env -qaP | grep wget
       environment.systemPackages = [ 
         pkgs.git
+        pkgs.gh
         pkgs.htop
         pkgs.mkalias
         pkgs.alacritty
@@ -28,6 +29,7 @@
         pkgs.fnm
         pkgs.fzf
         pkgs.zoxide
+        pkgs.oh-my-posh
       ];
       
       fonts.packages = with pkgs; [
@@ -143,6 +145,12 @@
           tilesize = 32;
           largesize = 96;
           persistent-apps = [
+            "/System/Applications/Launchpad.app"
+            {
+              spacer = {
+                small = false;
+              };
+            }
             "/Applications/Safari.app"
             "/Applications/Zen.app"
             "/System/Applications/Mail.app"
