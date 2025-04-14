@@ -22,6 +22,7 @@ zinit light zsh-users/zsh-autosuggestions
 zinit light Aloxaf/fzf-tab
 
 # Add in snippets
+zinit snippet OMZP::alias-finder
 zinit snippet OMZP::git
 zinit snippet OMZP::brew
 zinit snippet OMZP::command-not-found
@@ -41,6 +42,12 @@ bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
 
 # Custom plugins settings
+# Alias finder
+zstyle ':omz:plugins:alias-finder' autoload yes
+zstyle ':omz:plugins:alias-finder' longer yes
+zstyle ':omz:plugins:alias-finder' exact yes
+zstyle ':omz:plugins:alias-finder' cheaper yes
+
 # History
 HISTSIZE=5000
 HISTFILE=~/.zsh_history
