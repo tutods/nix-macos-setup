@@ -1,6 +1,7 @@
 # Unload oh-my-posh for Apple Terminal app (not supported)
 if [ "$TERM_PROGRAM" != "Apple_Terminal" ]; then
-  eval "$(oh-my-posh init zsh)"
+  # Load oh-my-posh
+  eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.toml)"
 fi
 
 # Set the directory to store zinit and plugins
@@ -32,14 +33,13 @@ autoload -U compinit && compinit
 
 zinit cdreplay -q
 
-# Load oh-my-posh
-eval "$(oh-my-posh init zsh --config $HOME/.config/oh-my-posh/base.toml)"
-
 # Keybindings
 bindkey -e
 # Bind up/down arrow keys for history search
 bindkey "^[[A" history-search-backward
 bindkey "^[[B" history-search-forward
+# Bind Cmd+Backspace to delete word backward
+bindkey "\ew" backward-kill-line
 
 # Custom plugins settings
 # Alias finder
@@ -74,3 +74,7 @@ alias bsearch='brew search'
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
+eval "$(fnm env --use-on-cd --corepack-enabled --shell zsh)"
+
+# Console Ninja
+PATH=~/.console-ninja/.bin:$PATH
