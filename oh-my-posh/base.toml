@@ -41,14 +41,17 @@ final_space = true
     type = 'git'
     style = 'plain'
     foreground = 'p:lavender'
-    template = '{{ .HEAD }}{{ if or (.Working.Changed)  (.Staging.Changed) }}*{{end}} '
+    template = '{{ .HEAD }}{{ if or (.Working.Changed) (.Staging.Changed) }}*{{ end }}{{ if gt .Behind 0 }}{{end}}{{ if gt .Behind 0 }}\uf062{{end}}{{ if gt .Ahead 0 }}\uf062{{end}} '
+    # template = "{{ .HEAD }}{{if .BranchStatus }} {{ .BranchStatus }}{{ end }}{{ if .Working.Changed }} \uf044 {{ .Working.String }}{{ end }}{{ if and (.Working.Changed) (.Staging.Changed) }} |{{ end }}{{ if .Staging.Changed }} \uf046 {{ .Staging.String }}{{ end }}"
 
     [blocks.segments.properties]
       branch_icon = "\ue725 "
+      branch_ahead_icon = "\uf062 "
+      branch_behind_icon = "\uf062 "
       cherry_pick_icon = "\ue29b "
       commit_icon = "\uf417 "
-      fetch_status = false
-      fetch_upstream_icon = false
+      fetch_status = true
+      fetch_upstream_icon = true
       merge_icon = "\ue727 "
       no_commits_icon = "\uf0c3 "
       rebase_icon = "\ue728 "
