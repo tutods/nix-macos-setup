@@ -203,7 +203,13 @@ in
   system.keyboard.remapCapsLockToEscape = false;
 
   # Add ability to used TouchID for sudo authentication
-  security.pam.enableSudoTouchIdAuth = true;
+  security.pam = {
+    services = {
+      sudo_local = {
+        touchIdAuth = true;
+      };
+    };
+  };
 
   # macOS configuration
   system.activationScripts.postUserActivation.text = ''

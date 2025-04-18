@@ -4,9 +4,6 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
-    nix-darwin.url = "github:lnl7/nix-darwin/nix-darwin-24.11";
-    nix-darwin.inputs.nixpkgs.follows = "nixpkgs-darwin";
-
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
     homebrew-core = { url = "github:homebrew/homebrew-core"; flake = false; };
     homebrew-cask = { url = "github:homebrew/homebrew-cask"; flake = false; };
