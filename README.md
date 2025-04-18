@@ -128,3 +128,11 @@ nix run nix-darwin -- switch --flake .
 ```
 
 https://marceltc.com/nixing-macos-with-nix-darwin/
+
+---
+```
+nix-channel --add https://github.com/nix-darwin/nix-darwin/archive/master.tar.gz darwin
+nix-channel --add https://github.com/nix-community/home-manager/archive/master.tar.gz home-manager
+```
+
+https://www.dantuck.com/article/nix/setup/
