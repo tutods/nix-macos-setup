@@ -63,7 +63,6 @@
   programs.htop = {
     enable = true;
     settings= {
-      show_program_path = true;
       hide_userland_threads = 1;
       highlight_base_name = 1;
       show_cpu_temperature = 1;
