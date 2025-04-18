@@ -20,17 +20,14 @@ in
     hostPlatform = lib.mkDefault "${system}";
   };
 
+  imports = [
+    ./packages.nix
+    # ./vscode
+  ];
 
-  # fonts.packages = [
-  #   (pkgs.nerdfonts.override {
-  #     fonts = [
-  #       "FiraCode"
-  #       "FiraMono"
-  #       "Hack"
-  #       "JetBrainsMono"
-  #     ];
-  #   })
-  # ];
+  programs.vscode = {
+    enable = true;
+  };
 
   # pins to stable as unstable updates very often
   # nix.registry = {
@@ -51,14 +48,6 @@ in
   #   enableCompletion = true;
   #   promptInit = builtins.readFile ./../../data/mac-dot-zshrc;
   # };
-
-  # environment.systemPackages = with pkgs; import ./packages.nix;
-  # fonts.packages = with pkgs; import ./fonts.nix;
-
-  imports = [
-    ./packages.nix
-    ./vscode
-  ];
 
   homebrew = import ./darwin/homebrew.nix // { enable = true; };
   # homebrew = {
