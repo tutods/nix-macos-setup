@@ -22,12 +22,8 @@ in
 
   imports = [
     ./packages.nix
-    # ./vscode
+    ./vscode
   ];
-
-  programs.vscode = {
-    enable = true;
-  };
 
   # pins to stable as unstable updates very often
   # nix.registry = {
