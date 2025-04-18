@@ -270,5 +270,10 @@
 
     # Expose the package set, including overlays, for convenience.
     darwinPackages = self.darwinConfigurations."mac".pkgs;
+
+    home-manager.users.tutods.imports = [
+      ./dotfiles/home/vscode
+      ./dotfiles/darwin/git
+    ];
   };
 }

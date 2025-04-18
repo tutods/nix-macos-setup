@@ -112,3 +112,19 @@ Upgrade packages:
 # Links
 https://mynixos.com
 https://search.nixos.org/
+
+
+- `nix --extra-experimental-features "nix-command flakes" run nix-darwin`
+- `nix --extra-experimental-features "nix-command flakes" run nix-darwin/master#darwin-rebuild -- switch`
+
+---
+install nix
+```
+curl --proto '=https' --tlsv1.2 -sSf -L https://install.determinate.systems/nix | sh -s -- install
+mkdir ~/.config/nix
+cd ~/.config/nix
+nix flake init -t nix-darwin
+nix run nix-darwin -- switch --flake .
+```
+
+https://marceltc.com/nixing-macos-with-nix-darwin/
