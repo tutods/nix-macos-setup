@@ -20,7 +20,7 @@
     pkgs.duf
     pkgs.fd
     pkgs.doppler
-
+    pkgs.vscode
     pkgs.speedtest-cli
 
     # Image optimization tools

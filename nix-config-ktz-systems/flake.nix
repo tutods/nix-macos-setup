@@ -12,6 +12,8 @@
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
+    # nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
+
     # sops-nix.url = "github:Mic92/sops-nix";
     # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
 
@@ -30,6 +32,7 @@
       libx = import ./lib { inherit inputs outputs stateVersion; };
 
     in {
+      # nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
 
       darwinConfigurations = {
         # personal

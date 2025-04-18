@@ -1,9 +1,6 @@
-{ pkgs, lib, ... }:
-{
-  imports = [
-    ./extensions.nix
-  ];
+{ config, lib, pkgs, ... }:
 
+{
   programs.vscode = {
     enable = true;
     userSettings = pkgs.lib.importJSON ./settings.json;
