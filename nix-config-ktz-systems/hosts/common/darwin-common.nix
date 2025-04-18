@@ -20,36 +20,7 @@ in
     hostPlatform = lib.mkDefault "${system}";
   };
 
-  environment.systemPackages = with pkgs; [
-    ## unstable
-    pkgs.yt-dlp
-    # unstablePkgs.get_iplayer
-    # unstablePkgs.colmena
 
-    pkgs.git
-    pkgs.gh
-    pkgs.htop
-    pkgs.mkalias
-    pkgs.alacritty
-    pkgs.bat
-    pkgs.eza
-    pkgs.fnm
-    pkgs.fzf
-    pkgs.zoxide
-    pkgs.oh-my-posh
-
-    ## stable CLI
-    # pkgs.comma
-    # pkgs.just
-    # pkgs.nix
-  ];
-
-  fonts.packages = with pkgs; [
-    pkgs.jetbrains-mono
-    nerd-fonts.jetbrains-mono
-    nerd-fonts.fira-code
-    nerd-fonts.fira-mono
-  ];
   # fonts.packages = [
   #   (pkgs.nerdfonts.override {
   #     fonts = [
@@ -80,6 +51,8 @@ in
   #   enableCompletion = true;
   #   promptInit = builtins.readFile ./../../data/mac-dot-zshrc;
   # };
+  environment.systemPackages = import ./packages.nix;
+  fonts.packages = import ./fonts.nix;
 
   homebrew = import ./darwin/homebrew.nix // { enable = true; };
   # homebrew = {

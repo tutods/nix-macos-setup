@@ -9,7 +9,36 @@
 
     brews = [
       "mas"
-      #"borders"
+            
+      # "bat"
+      "consize"
+      # "docker-compose"
+      # "eza"
+      # "ffmpeg"
+      # "fish"
+      # "fzf"
+      # "git"
+      # "gh"
+      # "htop"
+      # "glances"
+      # "imagemagick"
+      # "jpegoptim"
+      # "optipng"
+      # "terraform"
+      "webp"
+      # "yt-dlp"
+      # "zoxide"
+      # "duf"
+      # "fd"
+      # "dopplerhq/cli/doppler"
+      # "infisical/get-cli/infisical"
+      # "k9s"
+      # "speedtest-cli"
+      # "task"
+      # "mas"
+      # "dockutil"
+      # "gpg"
+      # "wifi-password"
     ];
     taps = [
       #"FelixKratz/formulae" #sketchybar
