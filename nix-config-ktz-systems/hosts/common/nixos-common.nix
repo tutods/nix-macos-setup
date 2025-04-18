@@ -4,7 +4,7 @@ let
 in
 {
   time.timeZone = "Europe/Lisbon";
-  system.stateVersion = stateVersion;
+  # system.stateVersion = stateVersion;
 
   # home-manager = {
   #     useGlobalPkgs = true;

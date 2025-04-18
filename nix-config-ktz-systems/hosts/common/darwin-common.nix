@@ -1,6 +1,6 @@
 { inputs, outputs, config, lib, hostname, system, username, pkgs, ... }:
 let
-  inherit (inputs) nixpkgs nixpkgs-unstable;
+  inherit (inputs) nixpkgs;
 in
 {
   users.users.tutods.home = "/Users/tutods";
@@ -10,10 +10,10 @@ in
       experimental-features = [ "nix-command" "flakes" ];
       warn-dirty = false;
     };
-    channel.enable = false;
+    # channel.enable = false;
   };
-  services.nix-daemon.enable = true;
-  system.stateVersion = 5;
+  # services.nix-daemon.enable = true;
+  system.stateVersion = 6;
 
   nixpkgs = {
     config.allowUnfree = true;
@@ -44,16 +44,22 @@ in
     # pkgs.nix
   ];
 
-  fonts.packages = [
-    (pkgs.nerdfonts.override {
-      fonts = [
-        "FiraCode"
-        "FiraMono"
-        "Hack"
-        "JetBrainsMono"
-      ];
-    })
+  fonts.packages = with pkgs; [
+    pkgs.jetbrains-mono
+    nerd-fonts.jetbrains-mono
+    nerd-fonts.fira-code
+    nerd-fonts.fira-mono
   ];
+  # fonts.packages = [
+  #   (pkgs.nerdfonts.override {
+  #     fonts = [
+  #       "FiraCode"
+  #       "FiraMono"
+  #       "Hack"
+  #       "JetBrainsMono"
+  #     ];
+  #   })
+  # ];
 
   # pins to stable as unstable updates very often
   nix.registry = {
