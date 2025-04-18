@@ -13,14 +13,6 @@
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
 
     # nix-vscode-extensions.url = "github:nix-community/nix-vscode-extensions";
-
-    # sops-nix.url = "github:Mic92/sops-nix";
-    # sops-nix.inputs.nixpkgs.follows = "nixpkgs";
-
-    # disko.url = "github:nix-community/disko";
-    # disko.inputs.nixpkgs.follows = "nixpkgs";
-
-    # vscode-server.url = "github:nix-community/nixos-vscode-server";
   };
 
   outputs = { ... }@inputs:
@@ -32,18 +24,11 @@
       libx = import ./lib { inherit inputs outputs stateVersion; };
 
     in {
-      # nixpkgs.overlays = [ nix-vscode-extensions.overlays.default ];
-
-      darwinConfigurations = {
+      macOsConfigurations = {
         # personal
-        personal = libx.mkDarwin { hostname = "personal"; };
-        # nauvis = libx.mkDarwin { hostname = "nauvis"; };
-        # mac-studio = libx.mkDarwin { hostname = "mac-studio"; };
-        # mac-mini = libx.mkDarwin { hostname = "mac-mini"; };
-        # mooncake = libx.mkDarwin { hostname = "mooncake"; };
-
+        macbook = libx.mkDarwin { hostname = "macbook"; };
         # work
-        work = libx.mkDarwin { hostname = "work"; };
+        mindera = libx.mkDarwin { hostname = "work"; };
       };
     };
 }
