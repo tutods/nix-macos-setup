@@ -26,8 +26,8 @@ in
     ffmpeg
     figurine
     fira-code
-    fira-code-nerdfont
-    fira-mono
+    # fira-code-nerdfont
+    # fira-mono
     gh
     git-crypt
     gnused
@@ -35,13 +35,13 @@ in
     hugo
     iperf3
     ipmitool
-    jetbrains-mono # font
+    # jetbrains-mono # font
     jq
     just
     kubectl
     mc
     mosh
-    nerdfonts
+    # nerdfonts
     nmap
     qemu
     ripgrep

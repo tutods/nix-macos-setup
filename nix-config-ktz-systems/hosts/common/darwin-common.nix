@@ -62,16 +62,16 @@ in
   # ];
 
   # pins to stable as unstable updates very often
-  nix.registry = {
-    n.to = {
-      type = "path";
-      path = inputs.nixpkgs;
-    };
-    u.to = {
-      type = "path";
-      path = inputs.nixpkgs-unstable;
-    };
-  };
+  # nix.registry = {
+  #   n.to = {
+  #     type = "path";
+  #     path = inputs.nixpkgs;
+  #   };
+  #   u.to = {
+  #     type = "path";
+  #     path = inputs.nixpkgs-unstable;
+  #   };
+  # };
 
   programs.nix-index.enable = true;
 
