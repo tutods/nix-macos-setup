@@ -3,7 +3,7 @@
   mkDarwin = { hostname, username ? "tutods", system ? "aarch64-darwin",}:
   let
     inherit (inputs.nixpkgs) lib;
-    unstablePkgs = inputs.nixpkgs-unstable.legacyPackages.${system};
+    unstablePkgs = inputs.pkgs.legacyPackages.${system};
     customConfPath = ./../hosts/darwin/${hostname};
     customConf = if builtins.pathExists (customConfPath) then (customConfPath + "/default.nix") else ./../hosts/common/darwin-common-dock.nix;
   in
