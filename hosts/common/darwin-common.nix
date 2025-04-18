@@ -20,10 +20,6 @@ in
     hostPlatform = lib.mkDefault "${system}";
   };
 
-  imports = [
-    ./vscode
-  ];
-
   # pins to stable as unstable updates very often
   # nix.registry = {
   #   n.to = {

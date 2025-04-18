@@ -5,6 +5,10 @@ in
 {
   nixpkgs.config.allowUnfree = true;
 
+  imports = [
+    ./vscode
+  ];
+
   environment.systemPackages = with pkgs; [
     yt-dlp
     git
