@@ -6,6 +6,8 @@
     ./vscode
     ./eza.nix
     ./fzf.nix
+    ./git.nix
+    ./htop.nix
   ];
 
   # list of programs
@@ -25,36 +27,7 @@
   #   nix-direnv.enable = true;
   # };
 
-  programs.git = {
-    enable = true;
-    userEmail = "jdaniel.asousa@gmail.com";
-    userName = "Daniel Sousa @TutoDs";
-    diff-so-fancy.enable = true;
-    lfs.enable = true;
-    extraConfig = {
-      init = {
-        defaultBranch = "main";
-      };
-      # merge = {
-      #   conflictStyle = "diff3";
-      #   tool = "meld";
-      # };
-      pull = {
-        rebase = true;
-      };
-    };
-  };
-
-  programs.htop = {
-    enable = true;
-    settings= {
-      hide_userland_threads = 1;
-      highlight_base_name = 1;
-      show_cpu_temperature = 1;
-      show_program_path = 0;
-    };
-  };
-
+  
   programs.lf.enable = true;
 
   # programs.starship = {
@@ -87,36 +60,4 @@
   };
 
   programs.zoxide.enable = true;
-
-  programs.ssh = {
-    enable = true;
-    extraConfig = ''
-  StrictHostKeyChecking no
-    '';
-    matchBlocks = {
-      # ~/.ssh/config
-      "github.com" = {
-        hostname = "ssh.github.com";
-        port = 443;
-      };
-      # wd
-
-      # lancs
-      # "e elrond" = {
-      #   hostname = "100.117.223.78";
-      #   user = "alexktz";
-      # };
-      # # jb
-      # "core" = {
-      #   hostname = "demo.selfhosted.show";
-      #   user = "ironicbadger";
-      #   port = 53142;
-      # };
-      # "status" = {
-      #   hostname = "hc.ktz.cloud";
-      #   user = "ironicbadger";
-      #   port = 53142;
-      # };
-    };
-  };
 }
