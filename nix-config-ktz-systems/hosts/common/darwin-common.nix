@@ -81,7 +81,7 @@ in
   #   promptInit = builtins.readFile ./../../data/mac-dot-zshrc;
   # };
 
-  homebrew = import ./homebrew.nix // { enable = true; };
+  homebrew = import ./darwin/homebrew.nix // { enable = true; };
   # homebrew = {
   #   enable = true;
   #   onActivation = {
