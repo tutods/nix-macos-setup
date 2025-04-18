@@ -4,8 +4,8 @@
 
   imports = [
     ./vscode
-    ./eza
-    ./fzf
+    ./eza.nix
+    ./fzf.nix
   ];
 
   # list of programs
