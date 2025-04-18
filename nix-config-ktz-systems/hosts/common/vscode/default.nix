@@ -2,11 +2,11 @@
 {
   imports = [
     ./extensions.nix
-    ./keybindings.nix
-    ./settings.nix
   ];
 
   programs.vscode = {
     enable = true;
+    userSettings = pkgs.lib.importJSON ./settings.json;
+    keybindings = pkgs.lib.importJSON ./keybindings.json;
   };
 }

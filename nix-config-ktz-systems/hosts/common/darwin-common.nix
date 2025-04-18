@@ -51,8 +51,14 @@ in
   #   enableCompletion = true;
   #   promptInit = builtins.readFile ./../../data/mac-dot-zshrc;
   # };
-  environment.systemPackages = import ./packages.nix;
-  fonts.packages = import ./fonts.nix;
+
+  # environment.systemPackages = with pkgs; import ./packages.nix;
+  # fonts.packages = with pkgs; import ./fonts.nix;
+
+  imports = [
+    ./packages.nix
+    ./vscode
+  ];
 
   homebrew = import ./darwin/homebrew.nix // { enable = true; };
   # homebrew = {
