@@ -12,7 +12,7 @@ in
     };
     # channel.enable = false;
   };
-  services.nix-daemon.enable = true;
+  # services.nix-daemon.enable = true;
   system.stateVersion = 6;
 
   nixpkgs = {
@@ -73,7 +73,7 @@ in
   #   };
   # };
 
-  programs.nix-index.enable = true;
+  # programs.nix-index.enable = true;
 
   # programs.zsh = {
   #   enable = true;
