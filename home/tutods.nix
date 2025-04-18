@@ -2,6 +2,12 @@
 {
   home.stateVersion = "23.11";
 
+  imports = [
+    ./vscode
+    ./eza
+    ./fzf
+  ];
+
   # list of programs
   # https://mipmip.github.io/home-manager-option-search
 
@@ -18,27 +24,6 @@
   #   enable = true;
   #   nix-direnv.enable = true;
   # };
-
-  programs.eza = {
-    enable = true;
-    enableZshIntegration = true;
-    icons = "auto";
-    git = true;
-    extraOptions = [
-      "--group-directories-first"
-      "--header"
-      "--color=always"
-    ];
-  };
-
-  programs.fzf = {
-    enable = true;
-    enableBashIntegration = true;
-    enableZshIntegration = true;
-    defaultOptions = [
-      "--no-mouse"
-    ];
-  };
 
   programs.git = {
     enable = true;
