@@ -36,7 +36,7 @@
 
       darwinConfigurations = {
         # personal
-        tutods = libx.mkDarwin { hostname = "personal"; };
+        personal = libx.mkDarwin { hostname = "personal"; };
         # nauvis = libx.mkDarwin { hostname = "nauvis"; };
         # mac-studio = libx.mkDarwin { hostname = "mac-studio"; };
         # mac-mini = libx.mkDarwin { hostname = "mac-mini"; };
