@@ -21,7 +21,6 @@ in
   };
 
   imports = [
-    ./packages.nix
     ./vscode
   ];
 
