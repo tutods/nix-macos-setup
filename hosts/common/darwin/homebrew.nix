@@ -36,7 +36,6 @@
       "telegram"
       "whatsapp"
       "zen-browser"
-      "chatgpt"
       "raycast"
       # ----
       # "screenflow"
