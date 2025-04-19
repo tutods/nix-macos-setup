@@ -3,39 +3,43 @@
 {
   programs.vscode = {
     enable = true;
-    userSettings = pkgs.lib.importJSON ./settings.json;
-    keybindings = pkgs.lib.importJSON ./keybindings.json;
 
-    extensions = with pkgs.vscode-extensions; [
-      "redhat.vscode-yaml"
-      "chakrounanas.turbo-console-log"
-      "meganrogge.template-string-converter"
-      "bradlc.vscode-tailwindcss"
-      "foxundermoon.shell-format"
-      "alefragnani.project-manager"
-      "yoavbls.pretty-ts-er"
-      "wallabyjs.console-ninjarors"
-      "streetsidesoftware.code-spell-checker-portuguese"
-      "christian-kohler.npm-intellisense"
-      "bbenoist.nix"
-      "unifiedjs.vscode-mdx"
-      "bierner.github-markdown-preview"
-      "yzane.markdown-pdf"
-      "yzhang.markdown-all-in-one"
-      "github.github-vscode-theme"
-      "miguelsolorio.fluent-icons"
-      "usernamehw.errorlens"
-      "ms-azuretools.vscode-docker"
-      "streetsidesoftware.code-spell-checker"
-      "maximus136.change-string-case"
-      "catppuccin.catppuccin-vsc-icons"
-      "catppuccin.catppuccin-vsc"
-      "biomejs.biome"
-      "aaron-bond.better-comments"
-      "formulahendry.auto-complete-tag"
-      "aliariff.auto-add-brackets"
-      "pflannery.vscode-versionlens"
-      "eamodio.gitlens"
-    ];
+    profiles.default = {
+      userSettings = lib.importJSON ./settings.json;
+      keybindings = lib.importJSON ./keybindings.json;
+
+      # The extensions commented didn't work
+      extensions = with pkgs; [
+        vscode-extensions.redhat.vscode-yaml
+        # vscode-extensions.chakrounanas.turbo-console-log
+        vscode-extensions.meganrogge.template-string-converter
+        vscode-extensions.bradlc.vscode-tailwindcss
+        vscode-extensions.foxundermoon.shell-format
+        vscode-extensions.alefragnani.project-manager
+        vscode-extensions.yoavbls.pretty-ts-errors
+        # vscode-extensions.wallabyjs.console-ninjarors
+        # vscode-extensions.streetsidesoftware.code-spell-checker-portuguese
+        vscode-extensions.christian-kohler.npm-intellisense
+        vscode-extensions.bbenoist.nix
+        vscode-extensions.unifiedjs.vscode-mdx
+        vscode-extensions.bierner.github-markdown-preview
+        vscode-extensions.yzhang.markdown-all-in-one
+        vscode-extensions.github.github-vscode-theme
+        # vscode-extensions.miguelsolorio.fluent-icons
+        vscode-extensions.usernamehw.errorlens
+        vscode-extensions.ms-azuretools.vscode-docker
+        vscode-extensions.streetsidesoftware.code-spell-checker
+        # vscode-extensions.maximus136.change-string-case
+        vscode-extensions.catppuccin.catppuccin-vsc-icons
+        vscode-extensions.catppuccin.catppuccin-vsc
+        vscode-extensions.biomejs.biome
+        vscode-extensions.aaron-bond.better-comments
+        vscode-extensions.formulahendry.auto-rename-tag
+        vscode-extensions.formulahendry.auto-close-tag
+        # vscode-extensions.aliariff.auto-add-brackets
+        # vscode-extensions.pflannery.vscode-versionlens
+        vscode-extensions.eamodio.gitlens
+      ];
+    };
   };
 }

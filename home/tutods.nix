@@ -37,11 +37,6 @@
   #   settings = pkgs.lib.importTOML ./starship/starship.toml;
   # };
 
-  programs.oh-my-posh = {
-    enable = true;
-    settings = pkgs.lib.importTOML ./oh-my-posh/base.toml;
-  };
-
   # programs.bash.enable = true;
 
   programs.zsh = {

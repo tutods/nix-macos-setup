@@ -20,7 +20,6 @@ in
     duf
     fd
     doppler
-    vscode
     speedtest-cli
 
     # Image optimization tools
