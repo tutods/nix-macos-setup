@@ -1,10 +1,7 @@
 { config, inputs, pkgs, lib, ... }:
 {
   home.stateVersion = "23.11";
-  users.users.tutods = {
-    name = "tutods";
-    home = "/Users/tutods";
-  };
+  home.homeDirectory = "/Users/tutods";
   
   imports = [
     ./apps/vscode

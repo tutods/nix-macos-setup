@@ -1,7 +1,7 @@
 { config, inputs, pkgs, lib, ... }:
 {
   home.stateVersion = "23.11";
-  # users.users."daniel.a.sousa".home = "/Users/daniel.a.sousa";
+  home.homeDirectory = "/Users/daniel.a.sousa";
 
   imports = [
     ./apps/vscode
