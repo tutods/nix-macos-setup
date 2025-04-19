@@ -21,7 +21,7 @@ in
     ./homebrew.nix
     ./settings.nix
     ./security.nix
-    ./virtualization.nix
+    # ./virtualization.nix
     ./networking.nix
   ];
 

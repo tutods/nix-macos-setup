@@ -31,7 +31,8 @@
       "windsurf"
       "notion"
       "jordanbaird-ice"
-
+      "orbstack"
+      
       # ----
       # "screenflow"
       # "cleanshot"
