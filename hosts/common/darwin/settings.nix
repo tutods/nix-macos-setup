@@ -78,7 +78,6 @@
       AppleMetricUnits = 1;
       AppleTemperatureUnit = "Celsius";
       AppleWindowTabbingMode = "always";
-      PMPrintingExpandedStateForPrint = true;
       KeyRepeat = 2;
       PMPrintingExpandedStateForPrint = true;
       PMPrintingExpandedStateForPrint2 = true;
