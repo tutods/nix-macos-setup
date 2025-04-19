@@ -37,6 +37,7 @@
       "whatsapp"
       "zen-browser"
       "raycast"
+      "stats"
       # ----
       # "screenflow"
       # "cleanshot"
