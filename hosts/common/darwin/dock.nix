@@ -1,5 +1,8 @@
 { config, ... }:
-{
+
+let
+  homePath = config.users.users.tutods.home;
+in {
   system.defaults.dock = {
     # persistent-apps = [
     #   "/Applications/Google Chrome.app"
@@ -42,8 +45,8 @@
       }
     ];
     persistent-others = [
-      "~/Downloads"
-      "~/Developer"
+      "${homePath}/Downloads"
+      "${homePath}/Developer"
     ];
   };
 }
