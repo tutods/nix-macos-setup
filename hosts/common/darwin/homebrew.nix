@@ -1,4 +1,7 @@
+{...}:
+
 {
+  homebrew = {
     enable = true;
     onActivation = {
       cleanup = "zap";
@@ -9,39 +12,8 @@
 
     brews = [
       "mas"
-            
-      # "bat"
       "consize"
-      # "docker-compose"
-      # "eza"
-      # "ffmpeg"
-      # "fish"
-      # "fzf"
-      # "git"
-      # "gh"
-      # "htop"
-      # "glances"
-      # "imagemagick"
-      # "jpegoptim"
-      # "optipng"
-      # "terraform"
       "webp"
-      # "yt-dlp"
-      # "zoxide"
-      # "duf"
-      # "fd"
-      # "dopplerhq/cli/doppler"
-      # "infisical/get-cli/infisical"
-      # "k9s"
-      # "speedtest-cli"
-      # "task"
-      # "mas"
-      # "dockutil"
-      # "gpg"
-      # "wifi-password"
-    ];
-    taps = [
-      #"FelixKratz/formulae" #sketchybar
     ];
     casks = [
       "firefox"
@@ -148,4 +120,5 @@
       "Elmedia Video Player" = 1044549675;
       "SnippetsLab" = 1006087419;
     };
+  };
 }
