@@ -5,8 +5,8 @@
     enable = true;
 
     profiles.default = {
-      userSettings = lib.importJSON ./settings.json;
-      keybindings = lib.importJSON ./keybindings.json;
+      userSettings = pkgs.lib.importJSON ./settings.json;
+      keybindings = pkgs.lib.importJSON ./keybindings.json;
 
       # The extensions commented didn't work
       extensions = with pkgs; [

@@ -106,11 +106,11 @@
         DSDontWriteNetworkStores = true;
         DSDontWriteUSBStores = true;
       };
-      "com.apple.Safari" = {
+      #"com.apple.Safari" = {
         # Privacy: don’t send search queries to Apple
-        UniversalSearchEnabled = false;
-        SuppressSearchSuggestions = true;
-      };
+        #UniversalSearchEnabled = false;
+        #SuppressSearchSuggestions = true;
+      #};
       "com.apple.AdLib" = {
         allowApplePersonalizedAdvertising = false;
       };

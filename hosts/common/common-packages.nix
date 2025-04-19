@@ -7,7 +7,6 @@ in
 
   environment.systemPackages = with pkgs; [
     yt-dlp
-    git
     gh
     htop
     mkalias

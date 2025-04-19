@@ -44,7 +44,7 @@
     enable = true;
     enableCompletion = true;
     autosuggestion.enable = true;
-    #initExtra = (builtins.readFile ../mac-dot-zshrc);
+    #initExtra = (builtins.readFile ../data/mac-dot-zshrc);
   };
 
   programs.home-manager.enable = true;
@@ -52,7 +52,7 @@
 
   programs.bat = {
     enable = true;
-    config.theme = "Catppuccin Mocha";
+    # config.theme = "Catppuccin Mocha";
   };
 
   programs.zoxide.enable = true;

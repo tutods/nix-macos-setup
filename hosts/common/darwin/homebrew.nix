@@ -12,7 +12,6 @@
 
     brews = [
       "mas"
-      "consize"
       "webp"
     ];
     casks = [
@@ -32,7 +31,11 @@
       "notion"
       "jordanbaird-ice"
       "orbstack"
-      
+      "logi-options+"
+      "discord"
+      "telegram"
+      "whatsapp"
+
       # ----
       # "screenflow"
       # "cleanshot"

@@ -24,11 +24,12 @@
       libx = import ./lib { inherit inputs outputs stateVersion; };
 
     in {
-      macOsConfigurations = {
+      darwinConfigurations = {
         # personal
         macbook = libx.mkDarwin { hostname = "macbook"; };
         # work
         mindera = libx.mkDarwin { hostname = "work"; };
       };
+
     };
 }

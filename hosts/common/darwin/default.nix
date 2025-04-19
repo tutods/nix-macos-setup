@@ -3,6 +3,14 @@ let
   inherit (inputs) nixpkgs;
 in
 {
+  imports = [
+    ./homebrew.nix
+    ./settings.nix
+    ./security.nix
+    # ./virtualization.nix
+    ./networking.nix
+  ];
+  
   users.users.tutods.home = "/Users/tutods";
 
   nix = {
@@ -16,14 +24,6 @@ in
     hostPlatform = lib.mkDefault "${system}";
   };
   system.stateVersion = 6;
-
-  imports = [
-    ./homebrew.nix
-    ./settings.nix
-    ./security.nix
-    # ./virtualization.nix
-    ./networking.nix
-  ];
 
   time = {
     timeZone = "Europe/Lisbon";
