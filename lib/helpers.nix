@@ -4,16 +4,19 @@
   let
     inherit (inputs.nixpkgs) lib;
     unstablePkgs = inputs.pkgs.legacyPackages.${system};
-    customConfPath = ./../hosts/darwin/${hostname};
-    customConf = if builtins.pathExists (customConfPath) then (customConfPath + "/default.nix") else ./../hosts/common/darwin/common-dock.nix;
-  in
+    customConfPath = ./../hosts/darwin/${hostname}/default.nix;
+    # To check if have custom dock config or not to import the default one
+    customDockConfPath = ./../hosts/darwin/${hostname}/custom-dock.nix;
+    dockConf = if ! builtins.pathExists (customDockConfPath) then ./../hosts/common/darwin/dock.nix else null;
+  in 
     inputs.nix-darwin.lib.darwinSystem {
       specialArgs = { inherit system inputs username unstablePkgs; };
       #extraSpecialArgs = { inherit inputs; }
       modules = [
         ../hosts/common/common-packages.nix
         ../hosts/common/darwin
-        customConf
+        customConfPath
+        dockConf
         inputs.home-manager.darwinModules.home-manager {
             networking.hostName = hostname;
             home-manager.backupFileExtension = "bkp";
