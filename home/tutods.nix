@@ -8,6 +8,7 @@
     ./cli/eza.nix
     ./cli/git.nix
     ./cli/htop.nix
+    ./cli/oh-my-posh
   ];
 
   # list of programs
@@ -39,12 +40,12 @@
 
   # programs.bash.enable = true;
 
-  # programs.zsh = {
-  #   enable = true;
-  #   enableCompletion = true;
-  #   autosuggestion.enable = true;
-  #   #initExtra = (builtins.readFile ../mac-dot-zshrc);
-  # };
+  programs.zsh = {
+    enable = true;
+    enableCompletion = true;
+    autosuggestion.enable = true;
+    #initExtra = (builtins.readFile ../mac-dot-zshrc);
+  };
 
   programs.home-manager.enable = true;
   programs.nix-index.enable = true;
