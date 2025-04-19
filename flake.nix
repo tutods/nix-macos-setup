@@ -24,6 +24,7 @@
       libx = import ./lib { inherit inputs outputs stateVersion; };
 
     in {
+      
       darwinConfigurations = {
         # personal
         macbook = libx.mkDarwin { hostname = "macbook"; };

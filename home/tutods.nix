@@ -1,7 +1,7 @@
 { config, inputs, pkgs, lib, ... }:
 {
   home.stateVersion = "23.11";
-  home.homeDirectory = "/Users/tutods";
+  home.homeDirectory = lib.mkForce "/Users/tutods";
   
   imports = [
     ./apps/vscode
