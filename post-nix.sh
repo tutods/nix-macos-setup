@@ -1,0 +1,1 @@
+cp -r data/hyper.js $HOME/.hyper.js
