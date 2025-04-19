@@ -72,6 +72,29 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --icons 
 alias ls='eza --color=always --icons'
 alias bsearch='brew search'
 
+# Custom Functions #
+function commt() {
+  git add .
+  git commit -m "$1"
+  git push
+}
+
+function stashPull() {
+  git stash
+  git pull
+  git stash pop
+}
+
+function goMaster() {
+  git checkout master
+  git pull
+}
+
+function goMain() {
+  git checkout main
+  git pull
+}
+
 # Shell integrations
 eval "$(fzf --zsh)"
 eval "$(zoxide init --cmd cd zsh)"
