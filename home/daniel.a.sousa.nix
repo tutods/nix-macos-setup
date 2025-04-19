@@ -1,22 +1,38 @@
 { config, inputs, pkgs, lib, ... }:
 {
   home.stateVersion = "23.11";
-  users.users.tutods = {
-    name = "tutods";
-    home = "/Users/tutods";
-  };
-  
+  # users.users."daniel.a.sousa".home = "/Users/daniel.a.sousa";
+
   imports = [
     ./apps/vscode
     ./cli/fzf.nix
     ./cli/eza.nix
-    ./cli/git.nix
     ./cli/htop.nix
     ./cli/oh-my-posh
   ];
 
   # list of programs
   # https://mipmip.github.io/home-manager-option-search
+
+  programs.git = {
+    enable = true;
+    userEmail = "daniel.a.sousa@mindera.com";
+    userName = "Daniel Sousa";
+    diff-so-fancy.enable = true;
+    lfs.enable = true;
+    extraConfig = {
+      init = {
+        defaultBranch = "main";
+      };
+      # merge = {
+      #   conflictStyle = "diff3";
+      #   tool = "meld";
+      # };
+      pull = {
+        rebase = true;
+      };
+    };
+  };
 
   # aerospace config
   # home.file = lib.mkMerge [

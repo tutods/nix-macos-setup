@@ -10,8 +10,6 @@ in
     # ./virtualization.nix
     ./networking.nix
   ];
-  
-  users.users.tutods.home = "/Users/tutods";
 
   nix = {
     settings = {

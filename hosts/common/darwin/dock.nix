@@ -1,7 +1,7 @@
-{ config, ... }:
+{ config, username, ... }:
 
 let
-  homePath = config.users.users.tutods.home;
+  homePath = config.users.users.${username}.home;
 in {
   system.defaults.dock = {
     # persistent-apps = [

@@ -4,7 +4,7 @@
   programs.git = {
     enable = true;
     userEmail = "jdaniel.asousa@gmail.com";
-    userName = "Daniel Sousa @TutoDs";
+    userName = "Daniel Sousa @TutoDS";
     diff-so-fancy.enable = true;
     lfs.enable = true;
     extraConfig = {

@@ -35,6 +35,7 @@
       "discord"
       "telegram"
       "whatsapp"
+      "zen-browser"
 
       # ----
       # "screenflow"

@@ -9,34 +9,6 @@
       minimize-to-application = true;
       tilesize = 32;
       largesize = 96;
-      # persistent-apps = [
-      #   "/System/Applications/Launchpad.app"
-      #   {
-      #     spacer = {
-      #       small = false;
-      #     };
-      #   }
-      #   "/Applications/Safari.app"
-      #   "/Applications/Zen.app"
-      #   "/System/Applications/Mail.app"
-      #   "/System/Applications/Calendar.app"
-      #   {
-      #     spacer = {
-      #       small = false;
-      #     };
-      #   }
-      #   "/Applications/Cursor.app"
-      #   "/Applications/Hyper.app"
-      #   {
-      #     spacer = {
-      #       small = false;
-      #     };
-      #   }
-      # ];
-      # persistent-others = [
-      #   "/Users/${user}/Developer"
-      #   "/Users/${user}/Downloads"
-      # ];
     };
 
     trackpad = {
@@ -106,11 +78,11 @@
         DSDontWriteNetworkStores = true;
         DSDontWriteUSBStores = true;
       };
-      #"com.apple.Safari" = {
+      "com.apple.Safari" = {
         # Privacy: don’t send search queries to Apple
-        #UniversalSearchEnabled = false;
-        #SuppressSearchSuggestions = true;
-      #};
+        UniversalSearchEnabled = false;
+        SuppressSearchSuggestions = true;
+      };
       "com.apple.AdLib" = {
         allowApplePersonalizedAdvertising = false;
       };

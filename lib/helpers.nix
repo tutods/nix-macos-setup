@@ -24,7 +24,10 @@
             home-manager.useUserPackages = true;
             home-manager.extraSpecialArgs = { inherit inputs; };
             #home-manager.sharedModules = [ inputs.nixvim.homeManagerModules.nixvim ];
-            home-manager.users.${username} = { imports = [ ./../home/${username}.nix ]; };
+            home-manager.users.${username} = { 
+              home = "/Users/${username}";
+              imports = [ ./../home/${username}.nix ]; 
+            };
         }
         inputs.nix-homebrew.darwinModules.nix-homebrew {
           nix-homebrew = {

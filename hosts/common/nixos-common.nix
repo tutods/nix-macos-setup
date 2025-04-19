@@ -12,6 +12,11 @@ in
   #     users.tutods = import ../../../home/tutods.nix;
   # };
 
+  home-manager = {
+    tutods = import ../../../home/tutods.nix;
+    daniel.a.sousa = import ../../../home/daniel.a.sousa.nix
+  }
+
   # virtualisation = {
   #   docker = {
   #     enable = true;

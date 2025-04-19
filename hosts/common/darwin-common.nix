@@ -3,8 +3,6 @@ let
   inherit (inputs) nixpkgs;
 in
 {
-  users.users.tutods.home = "/Users/tutods";
-
   nix = {
     settings = {
       experimental-features = [ "nix-command" "flakes" ];
