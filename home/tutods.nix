@@ -3,11 +3,11 @@
   home.stateVersion = "23.11";
 
   imports = [
-    ./vscode
-    ./eza.nix
-    ./fzf.nix
-    ./git.nix
-    ./htop.nix
+    ./apps/vscode
+    ./cli/fzf.nix
+    ./cli/eza.nix
+    ./cli/git.nix
+    ./cli/htop.nix
   ];
 
   # list of programs
@@ -39,12 +39,12 @@
 
   # programs.bash.enable = true;
 
-  programs.zsh = {
-    enable = true;
-    enableCompletion = true;
-    autosuggestion.enable = true;
-    #initExtra = (builtins.readFile ../mac-dot-zshrc);
-  };
+  # programs.zsh = {
+  #   enable = true;
+  #   enableCompletion = true;
+  #   autosuggestion.enable = true;
+  #   #initExtra = (builtins.readFile ../mac-dot-zshrc);
+  # };
 
   programs.home-manager.enable = true;
   programs.nix-index.enable = true;
