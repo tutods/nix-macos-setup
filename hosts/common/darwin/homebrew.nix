@@ -39,6 +39,8 @@
       "raycast"
       "stats"
       "brave-browser"
+      "onyx"
+      "pearcleaner"
       # ----
       # "screenflow"
       # "cleanshot"
