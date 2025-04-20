@@ -38,6 +38,7 @@
       "zen-browser"
       "raycast"
       "stats"
+      "brave-browser"
       # ----
       # "screenflow"
       # "cleanshot"
