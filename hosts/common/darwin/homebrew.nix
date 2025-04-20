@@ -41,6 +41,9 @@
       "brave-browser"
       "onyx"
       "pearcleaner"
+      "bruno"
+      "httpie"
+      "insomnia"
       # ----
       # "screenflow"
       # "cleanshot"

@@ -64,7 +64,7 @@
 
     screensaver = {
       askForPassword = true;
-      askForPasswordDelay = 30;
+      askForPasswordDelay = 60;
     };
 
     SoftwareUpdate = {
@@ -99,6 +99,7 @@
   };
 
   system.activationScripts.postUserActivation.text = ''
+    defaults -currentHost write com.apple.screensaver idleTime -int 60
     # Following line should allow us to avoid a logout/login cycle
     /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
   '';
