@@ -4,10 +4,12 @@
     nix-darwin.url = "github:nix-darwin/nix-darwin/master";
     nix-darwin.inputs.nixpkgs.follows = "nixpkgs";
 
+    # nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
+    # homebrew-core = { url = "github:homebrew/homebrew-core"; flake = false; };
+    # homebrew-cask = { url = "github:homebrew/homebrew-cask"; flake = false; };
+    # homebrew-bundle = { url = "github:homebrew/homebrew-bundle"; flake = false; };
+    # Homebrew package manager
     nix-homebrew.url = "github:zhaofengli-wip/nix-homebrew";
-    homebrew-core = { url = "github:homebrew/homebrew-core"; flake = false; };
-    homebrew-cask = { url = "github:homebrew/homebrew-cask"; flake = false; };
-    homebrew-bundle = { url = "github:homebrew/homebrew-bundle"; flake = false; };
 
     home-manager.url = "github:nix-community/home-manager";
     home-manager.inputs.nixpkgs.follows = "nixpkgs";
