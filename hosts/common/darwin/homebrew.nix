@@ -44,6 +44,7 @@
       "bruno"
       "httpie"
       "insomnia"
+      "airbuddy"
       # ----
       # "screenflow"
       # "cleanshot"
