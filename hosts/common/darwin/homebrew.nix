@@ -45,6 +45,7 @@
       "httpie"
       "insomnia"
       "airbuddy"
+      "warp"
       # ----
       # "screenflow"
       # "cleanshot"
