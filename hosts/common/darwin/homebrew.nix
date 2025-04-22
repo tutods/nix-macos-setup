@@ -66,7 +66,6 @@
       "tailscale"
       # ----
       "marta"
-      "chatgpt"
     ];
     masApps = {
       "Amphetamine" = 937984704;
