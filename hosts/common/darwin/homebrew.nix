@@ -15,110 +15,59 @@
       "webp"
     ];
     casks = [
+      # Web
+      "arc"
       "firefox"
+      "zen-browser"
       "google-chrome"
+      "brave-browser"
       "qbittorrent"
-      "orbstack"
-      "bitwarden"
-      "iina"
-      "visual-studio-code"
-      "hyper"
-      "cursor"
-      "jetbrains-toolbox"
-      "trae"
-      "hyper"
-      "windsurf"
-      "notion"
-      "jordanbaird-ice"
-      "orbstack"
-      "logi-options+"
       "discord"
       "telegram"
       "whatsapp"
-      "zen-browser"
-      "raycast"
-      "stats"
-      "brave-browser"
-      "onyx"
-      "pearcleaner"
+      "slack"
+
+      # Developer tools
+      "cursor"
+      "windsurf"
+      "trae"
+      "visual-studio-code"
+      "hyper"
+      "warp"
+      "orbstack"
+      "jetbrains-toolbox"
       "bruno"
       "httpie"
       "insomnia"
-      "airbuddy"
-      "warp"
-      # ----
-      # "screenflow"
-      # "cleanshot"
-      # "adobe-creative-cloud"
-      # #"nikitabobko/tap/aerospace"
-      # "alacritty"
-      # "alcove"
-      # "audacity"
-      # #"balenaetcher"
-      # "bambu-studio"
-      # "bentobox"
-      # #"clop"
-      # "discord"
-      # "displaylink"
-      # #"docker"
-      # "element"
-      # "elgato-camera-hub"
-      # "elgato-control-center"
-      # "elgato-stream-deck"
-      # "firefox"
-      # "flameshot"
-      # "font-fira-code"
-      # "font-fira-code-nerd-font"
-      # "font-fira-mono-for-powerline"
-      # "font-hack-nerd-font"
-      # "font-jetbrains-mono-nerd-font"
-      # "font-meslo-lg-nerd-font"
-      # "ghostty"
-      # "google-chrome"
-      # "iina"
-      # "istat-menus"
-      # "iterm2"
-      # "jordanbaird-ice"
-      # "lm-studio"
-      # "logitech-options"
-      # "macwhisper"
-      # "marta"
-      # "mqtt-explorer"
-      # "music-decoy" # github/FuzzyIdeas/MusicDecoy
-      # "nextcloud"
-      # "notion"
-      # "obs"
-      # "obsidian"
-      # "ollama"
-      # "omnidisksweeper"
-      # "orbstack"
-      # "openscad"
-      # "openttd"
-      # "plexamp"
-      # "popclip"
-      # "prusaslicer"
-      # "raycast"
-      # "signal"
-      # "shortcat"
-      # "slack"
-      # "spotify"
-      # "steam"
-      # "tailscale"
-      # "warp"
-      # #"wireshark"
-      # "viscosity"
-      # "visual-studio-code"
-      # "vlc"
-      # # "lm-studio"
 
-      # # # rogue amoeba
-      # "audio-hijack"
-      # "farrago"
-      # "loopback"
-      # "soundsource"
+      # Design
+      "figma"
+
+      # Tools
+      "stats"
+      "onyx"
+      "pearcleaner"
+
+      # Notes
+      "notion"
+      # "obsidian"
+
+      # Other
+      "bitwarden"
+      "raycast"
+      "airbuddy"
+      "iina"
+      "jordanbaird-ice"
+      "logi-options+"
+      # "vlc"
+      #"balenaetcher"
+      
+      # VPNs
+      "tailscale"
+      # ----
+      "marta"
     ];
     masApps = {
-      "Tailscale" = 1475387142;
       "Amphetamine" = 937984704;
       "Numbers" = 409203825;
       "Pages" = 409201541;
@@ -134,6 +83,9 @@
       "Xnip" = 1221250572;
       "Elmedia Video Player" = 1044549675;
       "SnippetsLab" = 1006087419;
+      
+      # Installed via homebrew casks
+      # "Tailscale" = 1475387142;
     };
   };
 }
