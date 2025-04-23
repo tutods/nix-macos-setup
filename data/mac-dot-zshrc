@@ -71,6 +71,7 @@ zstyle ':fzf-tab:complete:__zoxide_z:*' fzf-preview 'eza --color=always --icons 
 # Aliases
 alias ls='eza --color=always --icons'
 alias bsearch='brew search'
+alias work="cd ~/Developer"
 
 # Custom Functions #
 function commt() {
