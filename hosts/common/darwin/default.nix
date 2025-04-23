@@ -35,6 +35,7 @@ in
     sleep = {
       computer = 5;
       display = 5;
+      allowSleepByPowerButton = true;
     };
   };
 
