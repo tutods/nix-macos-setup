@@ -67,7 +67,7 @@
       #"balenaetcher"
       
       # VPNs
-      "tailscale"
+      # "tailscale"
       # ----
       "marta"
     ];
@@ -89,7 +89,7 @@
       "SnippetsLab" = 1006087419;
       
       # Installed via homebrew casks
-      # "Tailscale" = 1475387142;
+      "Tailscale" = 1475387142;
     };
   };
 }

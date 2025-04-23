@@ -64,7 +64,7 @@
 
     screensaver = {
       askForPassword = true;
-      askForPasswordDelay = 10;
+      askForPasswordDelay = 60;
     };
 
     SoftwareUpdate = {
@@ -79,7 +79,7 @@
         DSDontWriteUSBStores = true;
       };
       "com.apple.Safari" = {
-        # Privacy: don’t send search queries to Apple
+        # Privacy: don't send search queries to Apple
         UniversalSearchEnabled = false;
         SuppressSearchSuggestions = true;
       };
@@ -99,8 +99,8 @@
   };
 
   system.activationScripts.postUserActivation.text = ''
-    defaults -currentHost write com.apple.screensaver idleTime -int 10
-    # Following line should allow us to avoid a logout/login cycle
-    # /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
+    defaults -currentHost write com.apple.screensaver idleTime -int 60
   '';
+  # Following line should allow us to avoid a logout/login cycle
+  # /System/Library/PrivateFrameworks/SystemAdministration.framework/Resources/activateSettings -u
 }
