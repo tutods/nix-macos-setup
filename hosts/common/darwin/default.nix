@@ -33,7 +33,8 @@ in
 
   power = {
     sleep = {
-      computer = 10;
+      computer = 5;
+      display = 5;
     };
   };
 

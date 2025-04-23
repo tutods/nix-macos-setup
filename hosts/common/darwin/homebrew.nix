@@ -47,6 +47,10 @@
       "stats"
       "onyx"
       "pearcleaner"
+      
+      # Remote control
+      "teamviewer"
+      "anydesk"
 
       # Notes
       "notion"
