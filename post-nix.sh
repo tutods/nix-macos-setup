@@ -8,3 +8,4 @@ code --install-extension miguelsolorio.fluent-icons
 code --install-extension maximus136.change-string-case
 code --install-extension aliariff.auto-add-brackets
 code --install-extension pflannery.vscode-versionlens
+code --install-extension piotrpalarz.vscode-gitignore-generator
